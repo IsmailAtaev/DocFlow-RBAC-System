@@ -1,6 +1,5 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ValidationPipe } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 import cookieParser from 'cookie-parser';
@@ -14,12 +13,6 @@ async function bootstrap() {
 
   app.use(cookieParser());
   app.use(morgan('dev'));
-
-  // app.useGlobalPipes(new ValidationPipe({
-  //   whitelist: true,
-  //   forbidNonWhitelisted: true,
-  //   transform: true,
-  // }),);
   app.useGlobalFilters(new ZodFilter());
 
   app.useStaticAssets(join(__dirname, '..', 'public/uploads'), {

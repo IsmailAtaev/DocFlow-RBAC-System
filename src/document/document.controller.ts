@@ -1,7 +1,4 @@
-import {
-  Controller, Post, Get, Patch, Delete, Param, UploadedFile,
-  UseInterceptors, Body, UseGuards, Query,
-} from '@nestjs/common'
+import { Controller, Post, Get, Patch, Delete, Param, UploadedFile, UseInterceptors, Body, UseGuards, Query, } from '@nestjs/common'
 import { DocumentService } from './document.service'
 import { multerFileInterceptor } from './multer.config'
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';

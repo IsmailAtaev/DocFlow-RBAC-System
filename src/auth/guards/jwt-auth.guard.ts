@@ -1,8 +1,6 @@
 import { Injectable, CanActivate, ExecutionContext, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 
-// check if it header token Authorization
-
 @Injectable()
 export class JwtAuthGuard implements CanActivate {
     constructor(private readonly jwtService: JwtService) { }

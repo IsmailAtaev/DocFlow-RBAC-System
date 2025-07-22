@@ -2,7 +2,7 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 
-// проверяет токен, валиден или нет
+/** Check token */
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {

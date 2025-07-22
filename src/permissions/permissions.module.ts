@@ -9,4 +9,5 @@ import { PermissionRepo } from './repo';
   controllers: [PermissionsController],
   providers: [PermissionsService, PermissionRepo],
 })
+
 export class PermissionsModule { }

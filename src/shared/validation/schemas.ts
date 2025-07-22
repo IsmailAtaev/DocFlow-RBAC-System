@@ -9,7 +9,6 @@ export const strDate = z
     .transform((val) => new Date(val))
     .refine((val) => isDate(val), { message: 'Must be a valid ISO date', });
 
-
 export const CreatedAtQuerySchema = z.object({
     createdFrom: strDate.optional(),
     createdTo: strDate.optional(),

@@ -6,7 +6,7 @@ import { jsonArrayFrom, jsonBuildObject } from 'kysely/helpers/postgres';
 import { getDateRange } from 'src/shared/utils/date-range'
 import { DB } from 'src/db/types'
 import { LimitOffset, UUID } from 'src/shared/validation/schemas'
-import { AssignPermissionsDto, RoleDto, RoleQueryDto } from './dto/role.dto';
+import { RoleDto, RoleQueryDto } from './dto/role.dto';
 
 const tableName = ConstantsDb.ROLES;
 const tablePermissons = ConstantsDb.PERMISSIONS;
@@ -116,8 +116,6 @@ export class RoleRepo {
             .orderBy('roles.code', 'asc')
             .execute();
     }
-
-
 
     // role_permissions
     async findPermissionsByIds(ids: string[]) {

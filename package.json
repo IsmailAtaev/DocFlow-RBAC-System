@@ -18,8 +18,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "migrate": "ts-node src/migrate.ts",
-    "generate:types": "ts-node scripts/generate-types.ts",
+    "migrate": "ts-node src/db/migrate.ts",
+    "generate:types": "dotenv -e .env -- kysely-codegen",
     "seed:rbac": "ts-node src/db/seeds/seed.ts"
   },
   "dependencies": {

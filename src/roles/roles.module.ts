@@ -10,4 +10,5 @@ import { RoleRepo } from './repo';
   providers: [RolesService, RoleRepo],
   exports: [RoleRepo]
 })
+
 export class RolesModule { }

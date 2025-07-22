@@ -1,11 +1,11 @@
-import { Controller, Post, Get, Param, Patch, Delete, Body, UseGuards, ParseUUIDPipe, Query } from '@nestjs/common';
+import { Controller, Post, Get, Param, Patch, Delete, Body, UseGuards, Query } from '@nestjs/common';
+import { assignPermissionsDto, AssignPermissionsDto, RoleDto, roleDto, roleQueryDto, RoleQueryDto } from './dto/role.dto';
 import { RolesService } from './roles.service';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import { PermissionGuard } from 'src/auth/guards/permission.guard';
 import { Permission } from 'src/decorators/permission.decorator';
 import { uuid, UUID } from 'src/shared/validation/schemas';
 import { ZodPipe } from 'src/shared/validation/zod-pipe';
-import { assignPermissionsDto, AssignPermissionsDto, RoleDto, roleDto, roleQueryDto, RoleQueryDto } from './dto/role.dto';
 
 @Controller('roles')
 @UseGuards(JwtAuthGuard, PermissionGuard)

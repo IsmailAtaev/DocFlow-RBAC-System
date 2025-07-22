@@ -2,11 +2,9 @@ import { CreatedAtQuerySchema, PaginationQuerySchema } from 'src/shared/validati
 import { z } from 'zod';
 
 export const assignPermissionsDto = z.object({
-    permissionIds: z.array(z.string().uuid())
-        .nonempty('Permission IDs array cannot be empty')
+    permissionIds: z.array(z.string().uuid()).nonempty('Permission IDs array cannot be empty')
 });
 export type AssignPermissionsDto = z.infer<typeof assignPermissionsDto>;
-
 
 export const roleDto = z.object({
     code: z.string().min(3, 'Code must be at least 3 characters long'),

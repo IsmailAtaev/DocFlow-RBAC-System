@@ -40,7 +40,6 @@ export class RolesService {
     return this.repo.findAll({ ...query, ...pagination });
   }
 
-
   async getRolePermissions(roleId: UUID) {
     const rolePermissions = await this.repo.getRolePermissions(roleId);
 

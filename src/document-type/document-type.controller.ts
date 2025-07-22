@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, ParseUUIDPipe, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Query } from '@nestjs/common';
 import { DocumentTypeService } from './document-type.service';
 import { DocumentTypeDto, documentTypeDto } from './dto/document-type.dto';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';

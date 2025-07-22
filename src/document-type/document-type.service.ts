@@ -1,8 +1,6 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common'
 import { DocumentTypeRepo } from './repo'
 import { DocumentTypeDto } from './dto/document-type.dto'
-// import { UpdateDocumentTypeDto } from './dto/update-document-type.dto'
-// import { calculatePagination } from 'src/shared/utils/pagination';
 import { DocumentTypeQuery } from './dto/document-type.query.dto';
 import { limitOffset, UUID } from 'src/shared/validation/schemas';
 

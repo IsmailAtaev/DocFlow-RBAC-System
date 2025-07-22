@@ -24,7 +24,6 @@ export const registerDto = userDto.pick({
 })
 export type RegisterDto = z.infer<typeof registerDto>;
 
-
 export const updateUserRoleDto = userDto.pick({
     userId: true,
     roleId: true
