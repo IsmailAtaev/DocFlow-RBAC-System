@@ -62,18 +62,18 @@ export async function seedRolePermissions(db: Kysely<any>) {
             permission_id: p.id,
         })),
 
-        // Admin — полные права на DOCUMENT и USER
+        // Admin — full rights to DOCUMENT and USER
         ...['create', 'read', 'update', 'delete'].flatMap((action) => [
             { role_id: getRoleId('admin'), permission_id: getPermission('DOCUMENT', action) },
             { role_id: getRoleId('admin'), permission_id: getPermission('USER', action) },
         ]),
 
-        // Moderator — только DOCUMENT: read, create, delete
+        // Moderator — DOCUMENT only: read, create, delete
         { role_id: getRoleId('moderator'), permission_id: getPermission('DOCUMENT', 'read') },
         { role_id: getRoleId('moderator'), permission_id: getPermission('DOCUMENT', 'create') },
         { role_id: getRoleId('moderator'), permission_id: getPermission('DOCUMENT', 'delete') },
 
-        // User — только чтение
+        // User — only read
         { role_id: getRoleId('user'), permission_id: getPermission('DOCUMENT', 'read') },
         { role_id: getRoleId('user'), permission_id: getPermission('USER', 'read') },
         { role_id: getRoleId('user'), permission_id: getPermission('ROLE', 'read') },
@@ -82,7 +82,7 @@ export async function seedRolePermissions(db: Kysely<any>) {
 
     await db.insertInto('role_permissions').values(rolePermissions).execute();
 
-    console.log('RBAC: role_permissions сиды успешно добавлены');
+    console.log('RBAC: role_permissions Seeds successfully added');
 }
 
 export async function createAdminUser(db: Kysely<any>) {

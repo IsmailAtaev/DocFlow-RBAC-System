@@ -18,9 +18,8 @@ async function main() {
         await seedRolesAndPermissions(db);
         await seedRolePermissions(db);
         await createAdminUser(db);
-
     } catch (error) {
-        console.error('Ошибка при сидировании:', error);
+        console.error('Error during sidecarring:', error);
     } finally {
         await db.destroy();
     }

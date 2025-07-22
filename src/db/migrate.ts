@@ -27,7 +27,6 @@ async function migrate() {
     await upCreateDocuments(db)
     await upCreateRolePermission(db)
 
-
     console.log('Migration completed successfully.')
   } catch (e) {
     console.error('Migration failed:', e)
