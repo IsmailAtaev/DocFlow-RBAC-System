@@ -1,0 +1,177 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      background: #f5f5f5;
+    }
+
+    nav {
+      width: 200px;
+      background: #222;
+      color: white;
+      padding: 1rem;
+    }
+
+    section {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Navbar / Header
+  </header>
+
+  <main>
+    <nav>
+      Sidebar / Menu
+    </nav>
+    <section>
+      Dashboard content
+    </section>
+  </main>
+
+  <footer>
+    Footer
+  </footer>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 1rem;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      background: #f5f5f5;
+    }
+
+    nav {
+      width: 200px;
+      background: #222;
+      color: white;
+      padding: 1rem;
+      box-sizing: border-box;
+      transition: width 0.3s ease, padding 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+
+    nav.collapsed {
+      width: 50px;
+      padding: 1rem 0.5rem;
+    }
+
+    nav button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #444;
+      color: white;
+      border: none;
+      padding: 0.3rem 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    nav .menu-content {
+      transition: opacity 0.3s ease;
+    }
+
+    nav.collapsed .menu-content {
+      opacity: 0;
+      pointer-events: none;
+      height: 0;
+    }
+
+    section {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Navbar / Header
+  </header>
+
+  <main>
+    <nav id="sidebar">
+      <button onclick="toggleSidebar()">🏠</button>
+      <!-- <button onclick="toggleSidebar()">🏠☰</button> -->
+      <div class="menu-content">
+        Sidebar / Menu
+      </div>
+    </nav>
+    <section>
+      Dashboard content
+    </section>
+  </main>
+
+  <footer>
+    Footer
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("collapsed");
+    }
+  </script>
+
+</body>
+</html>

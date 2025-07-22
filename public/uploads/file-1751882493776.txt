@@ -1,0 +1,6 @@
+ photo
+title
+description 
+normatife Document number
+type
+categoriya 	

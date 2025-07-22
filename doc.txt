@@ -1,0 +1,38 @@
+
+
+
+// edilenler
+user-exists.guard.ts
+// delete ayrsanam bolya UserExistsGuard
+----------------------------------------------------
+
+permission.guard.ts
+// some ayrmaly goni baza zapros edip barlamaly 
+----------------------------------------------------
+// auto complite etmeli 
+document-type.controller.ts
+ @Get()
+  @UseGuards(JwtAuthGuard, UserExistsGuard, PermissionGuard)
+  @Permission('DOCUMENT', 'read')// auto complite etmeli 
+  findAll() {
+    return this.documentTypeService.findAll();
+  }
+----------------------------------------------------
+permission.decorator.ts
+// Auto complite mode action 
+----------------------------------------------------
+auth.service.ts
+// TODO duzetmeli sequaliz yalyu bar eken | duzedildi
+we repo ulanmaly 
+----------------------------------------------------
+004-create-user-auth.ts
+const tableName = 'user_auth'; // edit user add fullname // assosiation document have userId 
+----------------------------------------------------
+
+
+08-07-2025
+register repo service refactor
+true // check for database insertable<DB> goymaly 
+true // check user barmy yokmy 
+true // sub dal userdecarator goni user diyp almaly
+true // import * as bcrypt from 'bcrypt';//bcrypjs

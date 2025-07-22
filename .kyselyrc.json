@@ -1,0 +1,5 @@
+{
+  "dialect": "postgres",
+  "connectionString": "postgres://postgres:123456789@localhost:5432/flowers",
+  "outFile": "src/db/types.ts"
+}
